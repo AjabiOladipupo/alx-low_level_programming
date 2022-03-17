@@ -4,7 +4,7 @@
  * main - Entry point
  *
  * Return: returns 0 when everthing works fine
- * 
+ *
  */
 
 int main(void)
