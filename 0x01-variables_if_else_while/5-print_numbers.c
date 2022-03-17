@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *
- * Return: returns 0 when everthing works fine
+ * Return: returns 0 when everything works fine
  *
  */
 
@@ -13,8 +13,8 @@ int main(void)
 
 	for (n = 0; n < 10; ++n)
 	{
-		printf(%d" , n);
+		printf("%d", n)'
 	}
-	putchar(10);
+	putchat(10)
 	return (0);
 }
