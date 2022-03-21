@@ -1,10 +1,15 @@
 #include "main.h"
 
 /**
- * print_times_table - Prints the times table of the input,
- *                     starting with 0.
- * @n: The value of the times table to be printed.
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
  */
+int main(void)
+{
+	print_times_table(2);
+	return (0);
+}
 void print_times_table(int n)
 {
 	int num, mult, prod;
