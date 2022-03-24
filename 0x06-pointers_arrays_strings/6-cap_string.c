@@ -1,58 +1,51 @@
-#include "main.h
+#include "main.h"
+
 /**
- * separators - checks and ensure that all string is capitalized
- * @c: character to be checked
- * Return: if separator return 1. Otherwise return 0;
+ * _strlen - returns the length of a string
+ * @s: string
+ * Return: returns length as integer;
  */
-int separator(char c)
-{
-switch (c)
-{
-case ' ':
-case '\t':
-case '\n':
-case ',':
-case ';':
-case '.':
-case '!':
-case '?':
-case '"':
-case '(':
-case ')':
-case '{':
-case '}':
-return (1);
 
-default:
-return (0);
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (*(s + len) != '\0')
+		len++;
+
+	return (len);
 }
 
-
-}
 /**
- * cap_string - capitalizes all words of a string
- * @s: string to uppercase
- * Return: returns the modified string
- */
-char *cap_string(char *s)
+* cap_string - function that capitalize first character of a word
+* @str: string to capitalize
+* Return: returns the capitalized string
+*/
+
+char *cap_string(char *str)
 {
-int count, upper;
+	int index = 0;
 
-upper = -32;
+	while (str[++index])
+	{
+		while (!(str[index] >= 'a') && (str[index] <= 'z'))
+			index++;
 
-count = 0;
+		if (str[index - 1] == ' ' ||
+				str[index - 1] == '\t' ||
+				str[index - 1] == '\n' ||
+				str[index - 1] == ',' ||
+				str[index - 1] == ';' ||
+				str[index - 1] == '.' ||
+				str[index - 1] == '!' ||
+				str[index - 1] == '?' ||
+				str[index - 1] == '"' ||
+				str[index - 1] == '(' ||
+				str[index - 1] == ')' ||
+				str[index - 1] == '{' ||
+				str[index - 1] == '}')
+			str[index] -= 32;
+	}
 
-while (s[count] != '\0')
-{
-if (s[count] >= 'a' && s[count] <= 'z')
-{
-
-
-if (s[count] == *s || separator(s[count - 1]))
-
-s[count] += upper;
-}
-count++;
-}
-return (s);
+	return (str);
 }
