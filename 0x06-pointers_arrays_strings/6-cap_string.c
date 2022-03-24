@@ -1,51 +1,25 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _strlen - returns the length of a string
- * @s: string
- * Return: returns length as integer;
+ * *cap_string - this is awesome
+ * @s: pointer to char params
+ *
+ * Return: *s
  */
 
-int _strlen(char *s)
+char *cap_string(char *s)
 {
-	int len = 0;
+	int i, j;
+	char delimeters[] = " \t\n,;.!?\"(){}";
 
-	while (*(s + len) != '\0')
-		len++;
-
-	return (len);
-}
-
-/**
-* cap_string - function that capitalize first character of a word
-* @str: string to capitalize
-* Return: returns the capitalized string
-*/
-
-char *cap_string(char *str)
-{
-	int index = 0;
-
-	while (str[++index])
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		while (!(str[index] >= 'a') && (str[index] <= 'z'))
-			index++;
-
-		if (str[index - 1] == ' ' ||
-				str[index - 1] == '\t' ||
-				str[index - 1] == '\n' ||
-				str[index - 1] == ',' ||
-				str[index - 1] == ';' ||
-				str[index - 1] == '.' ||
-				str[index - 1] == '!' ||
-				str[index - 1] == '?' ||
-				str[index - 1] == '"' ||
-				str[index - 1] == '(' ||
-				str[index - 1] == ')' ||
-				str[index - 1] == '{' ||
-				str[index - 1] == '}')
-			str[index] -= 32;
+		if (s[0] >= 97 && s[0] <= 122)
+			s[0] = s[0] - 32;
+				for (j = 0; delimeters[j] != '\0'; j++)
+					if (s[i] == delimeters[j] && s[i + 1] >= 97 && s[i + 1] <= 122)
+						s[i + 1] = s[i + 1] - 32;
 	}
-
-	return (str);
+	return (s);
 }
