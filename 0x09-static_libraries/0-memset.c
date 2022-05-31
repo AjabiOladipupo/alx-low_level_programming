@@ -10,8 +10,8 @@
  * @n: unsigned int
  *
  * Description:
- * Author: Alex Senges
- * Date: Feb 21, 2022
+ * Author: Oladipupo Ajabi
+ * Date: May 31, 2022
  */
 
 char *_memset(char *s, char b, unsigned int n)
