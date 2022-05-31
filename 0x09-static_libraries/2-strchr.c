@@ -9,8 +9,8 @@
  * @c: char
  *
  * Description:
- * Author: Alex Senges
- * Date: Feb 21, 2022
+ * Author: Oladipupo Ajabi
+ * Date: May 31, 2022
  */
 
 char *_strchr(char *s, char c)
