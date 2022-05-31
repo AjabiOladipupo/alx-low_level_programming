@@ -7,8 +7,8 @@
  * @c: int
  *
  * Description:
- * Author: Alex Senges
- * Date: Feb 7, 2022
+ * Author: Oladipupo Ajabi
+ * Date: May 31, 2022
  */
 
 int _isupper(int c)
