@@ -1,0 +1,5 @@
+#!/bin/bash
+chmod -R 777 *
+git add .
+git commit -m "Low level programming - 0x09-static_libraries"
+git push --set-upstream origin main
